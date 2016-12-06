@@ -1,0 +1,247 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06.12.2016, 11:03:10
+    Author     : АСтах
+*/
+/*-------------------BODY---------------------------*/
+body{
+    padding: 0;
+    margin: 0;
+    background: url(../IMAGES/mainbg.gif) 0 0 repeat-x #fff;
+    color: #5F7A77;
+    font: 13px/19px Arial,Helvetica, sans-serif;
+}
+div, p, ul, h2, h3, h4, h5, img{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style-type: none;
+}
+.justyfy{
+    text-align: justify;
+}
+/*-------------------TOP_PANEL-------------------------*/
+/*Сначала позиционируем блок целиком*/
+#TopPan{
+    width: 778px; /*   ширина логотипа*/
+    height: 65px; /*Высота логотипа*/
+    background: url(../IMAGES/topbg.jpg) 0 0 no-repeat #fff;/*Фон логотипа*/
+    color: #828282;/*цвет шрифта логотипа*/
+    position: relative;/*Позиционирование блока логотипа*/
+/*    Относительное позиционирование блока нужно для абсолютного позиционирования 
+    изображения*/
+    margin: 0 auto;/*Выравниваем блок посередине экрана*/
+}
+/*Стилизуем картинку с логотипом*/
+#TopPan img.logo{
+    width: 136px; /*Ширина картинки*/
+    height: 31px; /*Высота картинки*/
+    position: absolute; /*Позиционируем картинку строго на одном месте*/
+    /*Задаём для картинки отступы*/
+    top:12px;/*Сверху*/
+    left: 235px;/*Слева*/
+}
+/*Занимаемся подписью*/
+/*Возможно стоило "зайти" через fugure*/
+
+#TopPan p.Caption{
+     width: 200px;/*    Ширина подписи*/
+     background: #fff;/* Фон подписи белый*/
+     color:#828282;/*    цвет шрифта повторяет настройки для блока. Это не необходимо, но мало ли...*/
+     position: absolute;/*    позиционирование должно повторять картинку сверху.*/
+     /*    Задаём отступы*/
+     top:43px;/*    сверху отступ побольше, чтобы параграф был под картинкой*/
+     left:235px;/*    слева тот же что и для картинки*/
+}
+
+/*----------------Панель заголовка и меню---------------------------------------*/
+/*Блок верхней панели*/
+#HeaderPan{
+   width: 686px;/*Ширина блока*/ 
+   height: 153px;/*Высота блока*/
+   background: url(../IMAGES/header.jpg) 0 0 no-repeat #fff;/*Фон блока*/
+   position: relative;/*Позиционирование блока*/
+   margin:  0 auto;/*Внешние отступы блока для выравнивания его посередине*/
+   padding: 11px 0 0 92px;/*Внутренние отступы блока*/
+}
+/*Свойства левого меню*/
+#HeaderPan ul .LeftMenu{
+    width: 87px;/*Ширина*/
+}
+/*Свойства пунктов левого меню*/
+#HeaderPan ul.LeftMenu li{
+    width: 87px;/*ширина*/
+    height: 22px;/*высота*/
+    border-bottom: 1px dashed #AECCCA;/*граница(подчёркивание каждого пункта меню)*/
+}
+/*Свойства ссылок пунктов левого меню*/
+#HeaderPan ul.LeftMenu li a{
+    width: 72px;/*ширина*/
+    height: 22px;/*высота*/
+    display: block;/*отображение(блочное в нашем случае)*/
+    background: url(../IMAGES/bullet-normal.gif) 0 7px no-repeat #fff;/*фон для украшения добавим каждому пункту квадратик слева с отступом 7px*/
+    color: #305E5C;/*цвет шрифта*/
+    line-height: 22px;/*минимальная высота строки*/
+    text-decoration: none;/*убираем подчёркивания*/
+    padding: 0 0 0 15px;/*внутренние отступы*/
+}
+/*Добавляем красоты и реакции при наведении мышки пунктам левого меню*/
+#HeaderPan ul.LeftMenu li a:hover{
+    background: url(../IMAGES/bullet-hover.gif)0 7px no-repeat #fff;/*Обеспециваем изменение цвета "флажка"*/
+    color:#305E5C;/*сохраняем цвет шрифта*/
+    line-height: 22px;/*сохраняем минимальную высоту строки*/
+    text-decoration: none;/*сохраняем отсутствие подчёркиваний*/
+    padding: 0 0 0 15px;/*сохраняем внутренние отступы*/
+}
+/*Убираем подчёркивание у нижнего пункта меню(О нас)*/
+#HeaderPan ul.LeftMenu li.Clients{
+    height: 87px;/*задаём высоту*/
+    width: 22px;/*задаём ширину*/
+    border-bottom: none;/*отменяем нижнюю границу*/
+}
+
+/*Панель тела*/
+/*Задаём свойства блока панели тела*/
+#BodyPan{
+    width: 686px;/*ширина*/
+    background: url(../IMAGES/bodybg.gif) 0 0 no-repeat;/*фон*/
+    position: relative;/*позиционирование относиельное*/
+    margin: 0 auto;/*внешние отступы(выравниваем блок по центру)*/
+    padding: 22px 0 0 92px;/*внутренние отступы*/
+}
+/*Задаём свойства левой панели блока тела*/
+/*Задаём свойства блока левой панели*/
+#LeftPan{
+    width: 114px;/*Ширина левой панели*/
+    float: left;/*смещение влево*/
+}
+/*Заголовки левой панели h2*/
+#LeftPan h2{
+    width: 114px;/*ширина*/
+    height: 34px;/*высота*/
+    background: #fff;/*фон*/
+    color: #5F7A77;/*цвет шрифта*/
+    font-size: 18px;/*размер шрифта*/
+    line-height: 34px;/*минимальная высота строки*/
+}
+/*Свойства списка левой панели*/
+#LeftPan ul{
+    width: 114px;/*ширина*/
+}
+/*Свойства строк списка левой панели*/
+#LeftPan ul li{
+    width: 114px;/*Ширина*/
+    height: 24px;/*Высота*/
+}
+/*Свойства ссылок списка левой панели*/
+#LeftPan ul li a{
+    width: 102px;/*Ширина*/
+    height: 24px;/*высота*/
+    display: block;/*отображение(блочное)*/
+    background: url(../IMAGES/bullet2-normal.gif) 0 10px no-repeat #fff;/*фоновое изображение для создания флажка c отступом в 10 пикселей*/
+    color:#5F7A77;/*цвет шрифта*/
+    text-decoration: none;/*убираем подчёркивания*/
+    line-height: 24px;/*минимальная высота строки*/
+    padding: 0 0 0 12px;/*внутренние отступы*/
+}
+/*Стилизуем ссылки списка для реакции на наведение мышки*/
+#LeftPan ul li a:hover{
+    background: url(../IMAGES/bullet2-hover.gif) 0 10px no-repeat #fff;/*фон*/
+    color:#5F7A77;/*цвет шрифта*/
+    text-decoration: none;/*убираем подчёркивания*/
+}
+/*Стилизуем правую панель*/
+/*Свойства блока правой панели*/
+#RightPan{
+    width: 511px;/*ширина*/
+    float: left;/*смещение влево*/
+    border-left: 1px solid #C8E8E2;/*левая граница*/
+    margin: 28px 0 0;/*внешний отступ*/
+    padding: 0 30px;/*внутренний отступ*/
+    
+}
+/*Общие стили для параграфов правой панели*/
+#RightPan p{
+    padding:0 0 10px 0;/*Внутренний отступ*/
+}
+/*Стиль для параграфа  с классом Мore*/
+#RightPan p.More{
+    width: 502px;/*ширина*/
+    height: 25px;/*Высота*/
+    float: left;/*смещение*/
+    background: url(../IMAGES/sky-color-bg.gif) 0 10px repeat-x;/*Фон сверху*/
+    padding: 0 0 20px 0; /*Внутренний отступ*/
+}
+/*Стиль для ссылки в параграфе с классом more*/
+#RightPan p.More a{
+    width: 92px;/*Ширина*/
+    height: 21px;/*Высота*/
+    display: block;/*Отображение*/
+    background: url(../IMAGES/special.gif) 0 0 no-repeat #fff;/*Фон*/
+    color:#958201;/*Цвет шрифта*/
+    line-height: 21px;/*Минимальная высота строки*/
+    text-transform: uppercase;/*Трансформация текста в верхний регистр*/
+    text-decoration: none;/*Убираем подчёркивания*/
+    margin: 0 0 0 328px;/*Внешние отступы*/
+    padding: 4px 0 0 50px;/*Внутренние отступы*/
+    
+}
+/*Стиль для ссылки в параграфе с классом more реакция ссылки на наведение курсора*/
+#RightPan p.More a:hover{
+    background: url(../IMAGES/buy.gif) 0 0 no-repeat #fff;/*Меняем флажок*/
+    color: #645804;/*меняем цвет шрифта*/
+    text-decoration: none;/*убираем подчёрквания со ссылки*/
+}
+/*-------------ФУТЕР--------------------------*/
+/*Главный блок футера*/
+#FooterMainPan{
+    height: 103px;/*Высота*/
+    background: url(../IMAGES/footerbg.gif) 0 0 repeat-x #D3F0F0;/*Фон*/
+    color: #2F5958;/*Цвет шрифта*/
+    font: 13px/20px "Trebuchet MS", Arial, Helvetica, sans-serif;/*Настройки шрифта*/ 
+    position: relative;/*Позиционирование*/
+    margin: 0 auto;/*Внешние отступы*/
+    clear: both;/*Очистка смещения*/
+    padding: 36px 0 0;/*Внутренние отступы*/
+    
+}
+/*Меню футера*/
+#FooterPan{
+    width: 778px;/*Ширина*/
+    position: relative;/*Позиционирование*/
+    margin: 0 auto;/*Внешние отступы*/
+}
+/*Свойства панели списка меню футера*/
+#FooterPan ul{
+    width: 608px;/*Ширина*/
+    height: 20px;/*Высота списка*/
+    position: relative;/*Позиционирование*/
+    margin:0 auto;/*Внешние отступы*/
+    
+}
+/*Свойства элементов списка панели меню футера*/
+#FooterPan li{
+    float: left; /*Благодаря обтеканию располагаем элементы списка горизонтально*/
+}
+/*Свойства ссылок в элементах списка панели меню футера*/
+#FooterPan ul li a{
+    padding: 0 10px 0;/*Внутренний отступ*/
+    color:#2F5958;/*Цвет шрифта*/
+    background: #EBF8F7;/*Фон*/
+    text-decoration: none;/*Убираем подчёркивания*/
+    font-size: 13px;/*Размер шрифта*/
+}
+/*Добавляем подчёркивания при наведении мышки на ссылки в пунктах меню футера*/
+#FooterPan ul li a:hover{
+    text-decoration: underline;
+}
+/*Выравниваем копирайт*/
+#FooterPan p.copyright{
+    width: 250px;/*Ширина копирайта*/
+    margin: 10px 0 0 92px;/*Внешние отступы копирайта*/
+}
